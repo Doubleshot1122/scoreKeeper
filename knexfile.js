@@ -3,7 +3,7 @@ const path = require('path')
 module.exports = {
   development: {
     client: 'pg',
-    connection: 'postgres://localhost/southpark',
+    connection: 'postgres://localhost/scorekeeper',
     migrations: {
       directory: path.join(__dirname, 'db', 'migrations')
     },
@@ -13,7 +13,7 @@ module.exports = {
   },
   test: {
     client: 'pg',
-    connection: 'postgres://localhost/southpark',
+    connection: 'postgres://localhost/scorekeeper',
     migrations: {
       directory: path.join(__dirname, 'db', 'migrations')
     },
