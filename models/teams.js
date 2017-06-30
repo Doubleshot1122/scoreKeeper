@@ -7,6 +7,10 @@ class Teams {
     return db('teams')
   }
 
+  static createTeam(body){
+    return db('teams').insert(body, '*')
+  }
+
 }
 
 module.exports = Teams;
