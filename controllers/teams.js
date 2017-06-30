@@ -6,10 +6,9 @@ function index(req, res, next) {
 
 function create(req, res, next) {
   let body = {
-    team_name: req.body.team_name
+    team_name: req.body.name
   }
-  console.log(req.body.team_name);
-  console.log(body);
+
   Teams.createTeam(body).then(results => {
     res.json(results)
   })

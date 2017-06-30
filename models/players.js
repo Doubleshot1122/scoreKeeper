@@ -7,6 +7,10 @@ class Players {
     return db('players')
   }
 
+  static createPlayer(body){
+    return db('players').insert(body, '*')
+  }
+
 }
 
 module.exports = Players;
