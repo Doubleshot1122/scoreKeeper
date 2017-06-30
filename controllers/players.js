@@ -9,9 +9,17 @@ function create(req, res, next) {
     player_name: req.body.name
   }
 
-  Players.createPlayer(body).then(results => {
-    res.json(results)
-  })
+  Players.createPlayer(body).then(results => res.json(results))
 }
 
-module.exports = {index, create};
+  function update(req, res, next) {
+    let id = req.params.id;
+    let body = {
+      team_id: req.body.team_id
+    }
+    console.log(id, body);
+
+    Players.addPlayerToTeam(body, id).then(results => res.json(results))
+  }
+
+module.exports = {index, create, update};
